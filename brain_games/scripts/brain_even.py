@@ -2,26 +2,13 @@
 
 from random import randint
 from brain_games.scripts.brain_games import greeting
+from brain_games.scripts.procedure import get_name
+from brain_games.scripts.procedure import get_answer
 from sys import exit
 
-def is_even(number):
+
+def is_even(number): ### специфическая для игры функция
     return 'yes' if number % 2 == 0 else 'no'
-
-
-def get_name():
-    name = ''
-    while name == '':
-        name = input('May I have your name? ')
-    print(f'Hello, {name}!')
-    return name
-
-
-def get_answer():
-    answer = ''
-    while answer == '':
-        answer = input('Your answer: ')
-    return answer
-
 
 def main():
     greeting()
@@ -29,8 +16,8 @@ def main():
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 0
     while i != 3:
-        number = randint(0,50)
-        parity_check = is_even(number)
+        number = randint(0,50) ### вот это место заменить
+        parity_check = is_even(number) ### модульной функцией
         print(f'Question: {number}')
         user_answer = get_answer()
 
