@@ -10,6 +10,7 @@ from sys import exit
 def is_even(number): ### специфическая для игры функция
     return 'yes' if number % 2 == 0 else 'no'
 
+
 def main():
     greeting()
     user_name = get_name()
