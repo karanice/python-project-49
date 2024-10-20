@@ -1,5 +1,6 @@
-from random import randint 
+from random import randint
 from random import choice
+
 
 def print_calc():
     print('What is the result of the expression?')
@@ -18,7 +19,7 @@ def gen_and_check():
         case '-':
             expr = a - b
         case '*':
-            expr = a * b   
+            expr = a * b
     print(f'Question: {a}{oper}{b}')
 
     return str(expr)

@@ -10,6 +10,6 @@ def is_even(number):
 
 
 def gen_and_check():
-    number = randint(1,50)
+    number = randint(1, 50)
     print(f'Question: {number}')
     return is_even(number)

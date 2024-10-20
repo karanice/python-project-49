@@ -30,7 +30,7 @@ def get_answer():
 def procedure(trigger):
     greeting()
     user_name = get_name()
-         
+
     match trigger:
         case 'calc':
             print_calc()
@@ -64,7 +64,8 @@ def procedure(trigger):
             print('Correct!')
         else:
             i = 0
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{check}'")
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{check}'")
             print(f'Let\'s try again, {user_name}!')
             exit()
 
