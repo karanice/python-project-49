@@ -20,6 +20,6 @@ def gen_and_check():
             expr = a - b
         case '*':
             expr = a * b
-    print(f'Question: {a}{oper}{b}')
+    print(f'Question: {a} {oper} {b}')
 
     return str(expr)
