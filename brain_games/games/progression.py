@@ -7,10 +7,8 @@ def print_progression():
 
 
 def gen_and_check():
-    rules = ['1', '2', '3', '4', '5']
+    rules = ['1', '2', '3', '4']
     rule = choice(rules)
-
-    # правила составления прогрессии 1 2 3 4 5
 
     start_number = randint(2, 9)
 
@@ -24,10 +22,8 @@ def gen_and_check():
             case '2':
                 el = el + 3
             case '3':
-                el = el * 2 - 1
-            case '4':
                 el = el - 4
-            case '5':
+            case '4':
                 el = el + (el - 1)
 
         progression.append(str(el))
