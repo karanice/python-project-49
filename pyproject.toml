@@ -7,10 +7,10 @@ readme = "README.md"
 repository = "https://github.com/karanice/python-project-49"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
-    "Environment :: Console"
-    "Intended Audience :: End Users/Desktop"
-    "Natural Language :: English"
-    "Programming Language :: Python :: 3.10"
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.10",
     "Topic :: Games/Entertainment :: Puzzle Games"
 ]
 packages = [
