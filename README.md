@@ -1,3 +1,26 @@
+### Description
+
+This project is a set of math games:
+
+1. brain-even is a game, where you need to select whether a given number is even or not.
+2. brain-calc is a game, where you need to calculate the expression.
+3. brain-gcd is a game, where you need to find the greatest common divisor of two given numbers.
+4. brain-prime is a game, where you need to select whether a given number is prime or not.
+5. brain-progression is a game, when you need to fill the gap in a given progression formulated by specific rule.
+
+All games contain three rounds, any mistake ends the game.
+
+### Installation
+
+Program can be installed via github:
+
+`git clone git@github.com:karanice/python-project-49.git`
+
+or pip:
+
+`pip install --user brain-games`
+
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/karanice/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/karanice/python-project-49/actions)
 
