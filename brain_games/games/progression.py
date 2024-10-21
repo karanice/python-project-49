@@ -7,7 +7,7 @@ def print_progression():
 
 
 def gen_and_check():
-    rules = ['1', '2', '3']
+    rules = ['1', '2', '3', '4', '5']
     rule = choice(rules)
 
     start_number = randint(2, 9)
@@ -18,11 +18,15 @@ def gen_and_check():
     for i in range(1, 10):
         match rule:
             case '1':
-                el = el * 2
+                el = el + 2
             case '2':
                 el = el + 3
             case '3':
                 el = el - 4
+            case '4':
+                el = el + 5
+            case '5':
+                el = el + 7
 
         progression.append(str(el))
         i += 1
