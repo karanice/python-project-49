@@ -1,9 +1,18 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "A set of math games for developing arithmetic skills"
 authors = ["karanice <to.anathema@gmail.com>"]
 readme = "README.md"
+repository = "https://github.com/karanice/python-project-49"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console"
+    "Intended Audience :: End Users/Desktop"
+    "Natural Language :: English"
+    "Programming Language :: Python :: 3.10"
+    "Topic :: Games/Entertainment :: Puzzle Games"
+]
 packages = [
   { include = "brain_games" },
 ]
