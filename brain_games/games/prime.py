@@ -1,4 +1,5 @@
 from random import randint
+from math import sqrt
 
 
 def print_prime():
@@ -7,11 +8,11 @@ def print_prime():
 
 # number > 2
 def is_prime(number):
-    for i in range(2, number // 2):
+    flag = True
+    for i in range(2, int(sqrt(number)) + 1):
         if number % i == 0:
-            return 'no'
-
-    return 'yes'
+            flag = False
+    return 'yes' if flag else 'no'
 
 
 def gen_and_check():
