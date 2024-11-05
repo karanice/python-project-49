@@ -3,10 +3,6 @@ from random import choice
 from operator import add, sub, mul
 
 
-def print_calc():
-    print('What is the result of the expression?')
-
-
 def gen():
     a = randint(2, 20)
     b = randint(2, 20)

@@ -2,10 +2,6 @@ from random import randint
 from math import sqrt
 
 
-def print_prime():
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-
-
 # number > 2
 def is_prime(number):
     flag = True

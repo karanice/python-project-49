@@ -1,10 +1,6 @@
 from random import randint
 
 
-def print_progression():
-    print('What number is missing in the progression?')
-
-
 def gen_and_check():
     number = randint(2, 9)
     step = randint(-5, 5)
