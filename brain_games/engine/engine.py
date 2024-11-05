@@ -1,30 +1,33 @@
 from brain_games.scripts.brain_games import greeting
 from sys import exit
-from brain_games.games.calc import gen_and_check as gac_calc
+from prompt import string
+from brain_games.games.calc import check as check_calc
 from brain_games.games.even import gen_and_check as gac_even
 from brain_games.games.gcd import gen_and_check as gac_gcd
 from brain_games.games.prime import gen_and_check as gac_prime
 from brain_games.games.progression import gen_and_check as gac_progression
-from brain_games.games.calc import print_calc
-from brain_games.games.even import print_even
-from brain_games.games.gcd import print_gcd
-from brain_games.games.prime import print_prime
-from brain_games.games.progression import print_progression
+from brain_games.instructions.instructions import print_calc, print_even, print_gcd, print_prime, print_progression
 
 
 def get_name():
-    name = ''
-    while name == '':
-        name = input('May I have your name? ')
+    name = string('May I have your name? ')
     print(f'Hello, {name}')
     return name
 
 
 def get_answer():
-    answer = ''
-    while answer == '':
-        answer = input('Your answer: ')
+    answer = string('Your answer: ')
     return answer
+
+
+def farewell(user_answer, check, user_name):
+    print(f"'{user_answer}' is wrong answer ;(. "
+          f"Correct answer was '{check}'")
+    print(f'Let\'s try again, {user_name}!')
+
+
+def congrats(user_name):
+    print(f'Congratulations, {user_name}!')
 
 
 def procedure(trigger):
@@ -44,10 +47,10 @@ def procedure(trigger):
             print_progression()
 
     i = 0
-    while i != 3:
+    for i in range (0, 3):
         match trigger:
             case 'calc':
-                check = gac_calc()
+                check = check_calc()
             case 'even':
                 check = gac_even()
             case 'gcd':
@@ -56,17 +59,16 @@ def procedure(trigger):
                 check = gac_prime()
             case 'progression':
                 check = gac_progression()
-
+        
         user_answer = get_answer()
 
         if user_answer == check:
             i += 1
             print('Correct!')
         else:
-            i = 0
-            print(f"'{user_answer}' is wrong answer ;(. "
-                  f"Correct answer was '{check}'")
-            print(f'Let\'s try again, {user_name}!')
+            farewell(user_answer, check, user_name)
             exit()
 
-    print(f'Congratulations, {user_name}!')
+    congrats(user_name)
+
+    
