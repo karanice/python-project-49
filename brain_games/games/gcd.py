@@ -1,4 +1,5 @@
 from random import randint
+from math import gcd
 
 
 def print_gcd():
@@ -11,11 +12,4 @@ def gen_and_check():
 
     print(f'Question: {a} {b}')
 
-    if a < b:
-        a, b = b, a
-
-    while a % b != 0:
-        a = a % b
-        a, b = b, a
-
-    return str(b)
+    return str(gcd(a, b))
