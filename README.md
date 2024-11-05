@@ -1,3 +1,9 @@
+### Technologies
+
+This project is made with Poetry. It uses such libraries as prompt, sys, random, operator, math.
+Flake8 is used for linting.
+
+
 ### Description
 
 This project is a set of math games:
