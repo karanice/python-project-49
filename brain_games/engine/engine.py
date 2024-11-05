@@ -6,7 +6,11 @@ from brain_games.games.even import gen_and_check as gac_even
 from brain_games.games.gcd import gen_and_check as gac_gcd
 from brain_games.games.prime import gen_and_check as gac_prime
 from brain_games.games.progression import gen_and_check as gac_progression
-from brain_games.rules.rules import p_calc, p_even, p_gcd, p_prime, p_progression
+from brain_games.rules.rules import p_calc
+from brain_games.rules.rules import p_even
+from brain_games.rules.rules import p_gcd
+from brain_games.rules.rules import p_prime
+from brain_games.rules.rules import p_progression
 
 
 def get_name():
