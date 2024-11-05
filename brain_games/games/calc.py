@@ -1,25 +1,25 @@
 from random import randint
 from random import choice
+from operator import add, sub, mul
 
 
 def print_calc():
     print('What is the result of the expression?')
 
 
-def gen_and_check():
-    opers = ['+', '-', '*']
-    oper = choice(opers)
-
+def gen():
     a = randint(2, 20)
     b = randint(2, 20)
+    exps = {
+        '+': add(a, b),
+        '-': sub(a, b),
+        '*': mul(a, b)
+    }
+    oper = choice(list(exps.keys()))
+    return a, b, oper, exps[oper]
 
-    match oper:
-        case '+':
-            expr = a + b
-        case '-':
-            expr = a - b
-        case '*':
-            expr = a * b
-    print(f'Question: {a} {oper} {b}')
 
-    return str(expr)
+def check():
+    a, b, oper, exp = gen()
+    print(f'Question: {a}{oper}{b}')
+    return str(exp)
