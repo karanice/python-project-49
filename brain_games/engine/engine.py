@@ -6,7 +6,7 @@ from brain_games.games.even import gen_and_check as gac_even
 from brain_games.games.gcd import gen_and_check as gac_gcd
 from brain_games.games.prime import gen_and_check as gac_prime
 from brain_games.games.progression import gen_and_check as gac_progression
-from brain_games.instructions.instructions import print_calc, print_even, print_gcd, print_prime, print_progression
+from brain_games.rules.rules import p_calc, p_even, p_gcd, p_prime, p_progression
 
 
 def get_name():
@@ -36,18 +36,18 @@ def procedure(trigger):
 
     match trigger:
         case 'calc':
-            print_calc()
+            p_calc()
         case 'even':
-            print_even()
+            p_even()
         case 'gcd':
-            print_gcd()
+            p_gcd()
         case 'prime':
-            print_prime()
+            p_prime()
         case 'progression':
-            print_progression()
+            p_progression()
 
     i = 0
-    for i in range (0, 3):
+    for i in range(0, 3):
         match trigger:
             case 'calc':
                 check = check_calc()
@@ -59,7 +59,7 @@ def procedure(trigger):
                 check = gac_prime()
             case 'progression':
                 check = gac_progression()
-        
+
         user_answer = get_answer()
 
         if user_answer == check:
@@ -70,5 +70,3 @@ def procedure(trigger):
             exit()
 
     congrats(user_name)
-
-    

@@ -17,5 +17,5 @@ def gen():
 
 def check():
     a, b, oper, exp = gen()
-    print(f'Question: {a}{oper}{b}')
+    print(f'Question: {a} {oper} {b}')
     return str(exp)
