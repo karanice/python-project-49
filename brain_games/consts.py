@@ -1,0 +1,5 @@
+q_calc = 'What is the result of the expression?'
+q_even = 'Answer "yes" if the number is even, otherwise answer "no".'
+q_gcd = 'Find the greatest common divisor of given numbers.'
+q_prime = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+q_progression = 'What number is missing in the progression?'
