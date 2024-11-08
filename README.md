@@ -12,7 +12,7 @@ This project is a set of math games:
 2. brain-calc is a game, where you need to calculate the expression.
 3. brain-gcd is a game, where you need to find the greatest common divisor of two given numbers.
 4. brain-prime is a game, where you need to select whether a given number is prime or not.
-5. brain-progression is a game, when you need to fill the gap in a given progression formulated by specific rule.
+5. brain-progression is a game, where you need to fill the gap in a given progression formulated by specific rule.
 
 All games contain three rounds, any mistake ends the game.
 
