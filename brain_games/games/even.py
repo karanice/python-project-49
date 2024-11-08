@@ -5,7 +5,6 @@ def is_even(number):
     return 'yes' if number % 2 == 0 else 'no'
 
 
-def gen_and_check():
+def even():
     number = randint(1, 50)
-    print(f'Question: {number}')
-    return is_even(number)
+    return is_even(number), str(number)

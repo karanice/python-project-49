@@ -3,7 +3,7 @@ from random import choice
 from operator import add, sub, mul
 
 
-def gen():
+def calc():
     a = randint(2, 20)
     b = randint(2, 20)
     exps = {
@@ -12,10 +12,5 @@ def gen():
         '*': mul(a, b)
     }
     oper = choice(list(exps.keys()))
-    return a, b, oper, exps[oper]
 
-
-def check():
-    a, b, oper, exp = gen()
-    print(f'Question: {a} {oper} {b}')
-    return str(exp)
+    return str(exps[oper]), f'{a} {oper} {b}'

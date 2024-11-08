@@ -8,10 +8,11 @@ def is_prime(number):
     for i in range(2, int(sqrt(number)) + 1):
         if number % i == 0:
             flag = False
+
     return 'yes' if flag else 'no'
 
 
-def gen_and_check():
+def prime():
     number = randint(3, 300)
-    print(f'Question: {number}')
-    return is_prime(number)
+
+    return is_prime(number), str(number)

@@ -1,7 +1,7 @@
 from random import randint
 
 
-def gen_and_check():
+def progression():
     number = randint(2, 9)
     step = randint(-5, 5)
 
@@ -15,6 +15,4 @@ def gen_and_check():
         number += step
         i += 1
 
-    print(f'Question: {" ".join(row)}')
-
-    return check
+    return check, " ".join(row)

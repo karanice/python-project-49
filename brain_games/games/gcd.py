@@ -1,11 +1,9 @@
 from random import randint
-from math import gcd
+from math import gcd as gcd_check
 
 
-def gen_and_check():
+def gcd():
     a = randint(2, 100)
     b = randint(2, 100)
 
-    print(f'Question: {a} {b}')
-
-    return str(gcd(a, b))
+    return str(gcd_check(a, b)), f'{a} {b}'
