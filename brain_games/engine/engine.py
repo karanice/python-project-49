@@ -1,28 +1,22 @@
-from brain_games.scripts.brain_games import greeting
-from sys import exit
-from prompt import string
+import prompt
+from brain_games.consts import ROUND_NUMBERS
 
 
-def procedure(do_check, instruction):
-    greeting()
-    user_name = string('May I have your name? ')
-    print(f'Hello, {user_name}')
+def run_game(get_question_and_answer, instruction):
+    name = prompt.string('Welcome to the Brain Games!\nMay I have your name? ')
+    print(f'Hello, {name}!\n{instruction}')
 
-    print(instruction)
-
-    i = 0
-    for i in range(0, 3):
-        check, question = do_check()
+    for round in range(0, ROUND_NUMBERS):
+        question, check = get_question_and_answer()
         print('Question: ' + question)
-        user_answer = string('Your answer: ')
+        user_answer = prompt.string('Your answer: ')
 
         if user_answer == check:
-            i += 1
             print('Correct!')
         else:
             print(f"'{user_answer}' is wrong answer ;(. "
-                  f"Correct answer was '{check}'")
-            print(f'Let\'s try again, {user_name}!')
-            exit()
+                  f"Correct answer was '{check}\n'"
+                  f"Let\'s try again, {name}!")
+            return None
 
-    print(f'Congratulations, {user_name}!')
+    print(f'Congratulations, {name}!')
