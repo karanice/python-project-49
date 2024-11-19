@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 
-from brain_games.engine.engine import procedure
-from brain_games.games.calc import calc
-from brain_games.consts import q_calc
+from brain_games.games.calc import run_calc_game
 
 
 def main():
-    procedure(calc, q_calc)
+    run_calc_game()
 
 
 if __name__ == '__main__':

@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
-from brain_games.engine.engine import procedure
-from brain_games.games.progression import progression
-from brain_games.consts import q_progression
+
+from brain_games.games.progression import run_progression_game
 
 
 def main():
-    procedure(progression, q_progression)
+    run_progression_game()
 
 
 if __name__ == '__main__':

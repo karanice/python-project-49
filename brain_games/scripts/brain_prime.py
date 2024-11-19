@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 
-from brain_games.engine.engine import procedure
-from brain_games.games.prime import prime
-from brain_games.consts import q_prime
+from brain_games.games.prime import run_prime_game
 
 
 def main():
-    procedure(prime, q_prime)
+    run_prime_game()
 
 
 if __name__ == '__main__':

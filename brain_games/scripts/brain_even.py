@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 
-from brain_games.engine.engine import procedure
-from brain_games.games.even import even
-from brain_games.consts import q_even
+from brain_games.games.even import run_even_game
 
 
 def main():
-    procedure(even, q_even)
+    run_even_game()
 
 
 if __name__ == '__main__':
