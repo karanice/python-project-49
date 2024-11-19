@@ -1,9 +1,16 @@
-from random import randint
-from math import gcd as gcd_check
+import math
+from brain_games.engine.engine import run_game
+from brain_games.consts import GCD_INSTRUCTION
+from brain_games.utils import get_random_number
 
 
-def gcd():
-    a = randint(2, 100)
-    b = randint(2, 100)
+def get_nums_pair_and_gcd():
+    a, b = get_random_number(), get_random_number()
+    nums_pair = f'{a} {b}'
+    gcd = math.gcd(a, b)
 
-    return str(gcd_check(a, b)), f'{a} {b}'
+    return nums_pair, str(gcd)
+
+
+def run_gcd_game():
+    run_game(get_nums_pair_and_gcd, GCD_INSTRUCTION)

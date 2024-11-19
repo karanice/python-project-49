@@ -1,18 +1,25 @@
-from random import randint
-from math import sqrt
+from brain_games.engine.engine import run_game
+from brain_games.consts import PRIME_INSTRUCTION
+from brain_games.utils import get_random_number
 
 
-# number > 2
-def is_prime(number):
-    flag = True
-    for i in range(2, int(sqrt(number)) + 1):
-        if number % i == 0:
-            flag = False
+def is_prime(num):
+    if num < 2:
+        return False
 
-    return 'yes' if flag else 'no'
+    for i in range(2, int(num // 2) + 1):
+        if num % i == 0:
+            return False
+
+    return True
 
 
-def prime():
-    number = randint(3, 300)
+def get_problem_number_and_answer():
+    problem_num = get_random_number()
+    answer = 'yes' if is_prime(problem_num) else 'no'
 
-    return is_prime(number), str(number)
+    return str(problem_num), answer
+
+
+def run_prime_game():
+    run_game(get_problem_number_and_answer, PRIME_INSTRUCTION)

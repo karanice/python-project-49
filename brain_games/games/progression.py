@@ -1,18 +1,23 @@
 from random import randint
+from brain_games.consts import PROGRESSION_LENGTH
+from brain_games.engine.engine import run_game
+from brain_games.consts import PROGRESSION_INSTRUCTION
+from brain_games.utils import get_random_number
 
 
-def progression():
-    number = randint(2, 9)
-    step = randint(-5, 5)
+def get_progression_and_missed_number():
+    first_num = get_random_number()
+    diff = get_random_number()
 
-    row = []
-    dots = randint(0, 9)
-    check = str(number + step * dots)
+    missed_num_ind = randint(0, PROGRESSION_LENGTH - 1)
+    check = str(first_num + diff * missed_num_ind)
 
-    for i in range(0, 10):
-        el = str(number)
-        row.append('..') if i == dots else row.append(el)
-        number += step
-        i += 1
+    progression = ' '.join([
+        '..' if i == missed_num_ind else str(first_num + i * diff)
+        for i in range(PROGRESSION_LENGTH)])
 
-    return check, " ".join(row)
+    return progression, check
+
+
+def run_progression_game():
+    run_game(get_progression_and_missed_number, PROGRESSION_INSTRUCTION)

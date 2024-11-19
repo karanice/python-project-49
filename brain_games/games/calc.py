@@ -1,16 +1,23 @@
-from random import randint
-from random import choice
-from operator import add, sub, mul
+import random
+from brain_games.engine.engine import run_game
+from brain_games.consts import CALC_INSTRUCTION
+from brain_games.utils import get_random_number
 
 
-def calc():
-    a = randint(2, 20)
-    b = randint(2, 20)
-    exps = {
-        '+': add(a, b),
-        '-': sub(a, b),
-        '*': mul(a, b)
-    }
-    oper = choice(list(exps.keys()))
+def rand_oper(a, b):
+    return random.choice(list({
+        '+': a + b,
+        '-': a - b,
+        '*': a * b
+    }.items()))
 
-    return str(exps[oper]), f'{a} {oper} {b}'
+
+def get_question_and_answer():
+    a, b = get_random_number(), get_random_number()
+    sign, result = rand_oper(a, b)
+    question = f'{a} {sign} {b}'
+    return question, str(result)
+
+
+def run_calc_game():
+    run_game(get_question_and_answer, CALC_INSTRUCTION)
