@@ -18,7 +18,7 @@ def get_problem_number_and_answer():
     problem_num = get_random_number()
     answer = 'yes' if is_prime(problem_num) else 'no'
 
-    return str(problem_num), answer
+    return problem_num, answer
 
 
 def run_prime_game():
