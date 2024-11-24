@@ -9,7 +9,7 @@ def get_nums_pair_and_gcd():
     nums_pair = f'{a} {b}'
     gcd = math.gcd(a, b)
 
-    return nums_pair, str(gcd)
+    return nums_pair, gcd
 
 
 def run_gcd_game():
