@@ -4,19 +4,24 @@ from brain_games.consts import CALC_INSTRUCTION
 from brain_games.utils import get_random_number
 
 
-def rand_oper(a, b):
-    return random.choice(list({
-        '+': a + b,
-        '-': a - b,
-        '*': a * b
-    }.items()))
+def get_random_operator(first_num, second_num):
+    # return random.choice(list({
+    #     '+': a + b,
+    #     '-': a - b,
+    #     '*': a * b
+    # }.items()))
+    return random.choice([
+        ('+', first_num + second_num),
+        ('-', first_num - second_num),
+        ('*', first_num * second_num)
+    ])
 
 
 def get_question_and_answer():
-    a, b = get_random_number(), get_random_number()
-    sign, result = rand_oper(a, b)
-    question = f'{a} {sign} {b}'
-    return question, str(result)
+    first_num, second_num = get_random_number(), get_random_number()
+    sign, result = get_random_operator(first_num, second_num)
+    question = f'{first_num} {sign} {second_num}'
+    return question, result
 
 
 def run_calc_game():
