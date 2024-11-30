@@ -1,8 +1,7 @@
-import random
 from brain_games.utils import get_random_number
 from brain_games.engine.engine import run_game
 from brain_games.consts import CALC_INSTRUCTION
-
+import random
 
 
 def get_random_operator(first_num, second_num):
