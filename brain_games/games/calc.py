@@ -5,11 +5,6 @@ from brain_games.utils import get_random_number
 
 
 def get_random_operator(first_num, second_num):
-    # return random.choice(list({
-    #     '+': a + b,
-    #     '-': a - b,
-    #     '*': a * b
-    # }.items()))
     return random.choice([
         ('+', first_num + second_num),
         ('-', first_num - second_num),
