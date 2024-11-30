@@ -1,7 +1,7 @@
 from random import randint
-from brain_games.consts import PROGRESSION_LENGTH
+
+from brain_games.consts import PROGRESSION_INSTRUCTION, PROGRESSION_LENGTH
 from brain_games.engine.engine import run_game
-from brain_games.consts import PROGRESSION_INSTRUCTION
 from brain_games.utils import get_random_number
 
 
